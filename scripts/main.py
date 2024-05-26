@@ -5,12 +5,13 @@ import predictive_modeling
 import hyperparameter_tuning
 import visualizations
 import win_prediction
+import race_prediction  # Import the race_prediction module
 from sklearn.model_selection import train_test_split
 
 # Load data
 data = load_data.load_data()
 
-# EDA visualizations
+# EDA
 eda.plot_race_winners_over_years(data['race_summaries'])
 eda.plot_top_drivers_by_points(data['driver_standings'])
 
@@ -35,8 +36,6 @@ best_params = hyperparameter_tuning.hyperparameter_tuning(X_train, y_train)
 visualizations.plot_feature_importance(importances, features)
 visualizations.plot_top_constructors_by_wins(data['constructor_standings'])
 
-# Generate correlation matrix
+# Correlation Matrix
 correlation_matrix = win_prediction.generate_correlation_matrix(data['race_summaries'])
-
-# Plot and save correlation matrix
 win_prediction.plot_correlation_matrix(correlation_matrix, save_path='../plots/driver_vs_gp_correlation.png')

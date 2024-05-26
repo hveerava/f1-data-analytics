@@ -1,5 +1,3 @@
-# scripts/hyperparameter_tuning.py
-
 from sklearn.model_selection import GridSearchCV
 from sklearn.ensemble import RandomForestClassifier
 

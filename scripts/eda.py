@@ -1,10 +1,7 @@
-# scripts/eda.py
-
 import matplotlib.pyplot as plt
 import seaborn as sns
 import os
 
-# Ensure the plots directory exists
 os.makedirs('../plots', exist_ok=True)
 
 def plot_race_winners_over_years(race_summaries):

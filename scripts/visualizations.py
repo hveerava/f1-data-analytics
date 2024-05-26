@@ -1,10 +1,7 @@
-# scripts/visualizations.py
-
 import matplotlib.pyplot as plt
 import seaborn as sns
 import os
 
-# Ensure the plots directory exists
 os.makedirs('../plots', exist_ok=True)
 
 def plot_feature_importance(importances, features):

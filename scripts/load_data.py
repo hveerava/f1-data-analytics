@@ -1,12 +1,8 @@
-# scripts/load_data.py
-
 import pandas as pd
 import os
 
 def load_data():
-    # Determine the directory containing the script
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    # Construct the path to the data directory
     data_path = os.path.join(script_dir, '..', 'data')
 
     race_details = pd.read_csv(os.path.join(data_path, 'race_details.csv'))
